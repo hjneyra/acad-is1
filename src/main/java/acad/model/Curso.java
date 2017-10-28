@@ -1,6 +1,7 @@
 package acad.model;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -14,7 +15,7 @@ public class Curso {
 
   private String nombre;
 
-  @ManyToMany
+  @ManyToMany(cascade = CascadeType.ALL)
   @JoinTable(name = "prerequisito",
       joinColumns = @JoinColumn(name = "curso_codigo", referencedColumnName = "codigo"),
       inverseJoinColumns = @JoinColumn(name = "prerequisito_codigo",
