@@ -8,6 +8,7 @@ import acad.repository.AlumnoRepository;
 
 @Service
 public class AlumnoService {
+
   @Autowired
   AlumnoRepository repository;
 
